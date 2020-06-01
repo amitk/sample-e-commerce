@@ -8,7 +8,7 @@
   <% if cart.blank? %>
 
   <div class="alert alert-warning" role="alert">
-   Your cart is empty, dawg. Be a good capitalist and buy something!
+   Your cart is empty. Be a good capitalist and buy something!
   </div>
 
    <% else %>
@@ -34,7 +34,7 @@
             TOTAL:
           </th>
           <th>
-            $<%= @cart_total %>
+            Rs.<%= @cart_total %>
           </th>
         </tr>
       </tfoot>
@@ -52,7 +52,7 @@
           data-description="<%= current_user.firstname %> <%= current_user.lastname %>'s Jungle Order"
           data-locale="auto"
           data-email="<%= current_user.email %>"
-          data-currency="cad">
+          data-currency="inr">
         </script>
       <% end %>
     </div>

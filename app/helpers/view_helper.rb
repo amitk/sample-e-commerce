@@ -11,4 +11,7 @@ module ViewHelper
     image_tag "#{rating}star.png"
   end
 
+  def humanized_money_with_symbol(price)
+    "Rs. #{price}"
+  end
 end

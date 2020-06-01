@@ -30,10 +30,12 @@ class OrdersController < ApplicationController
 
   def perform_stripe_charge
     Stripe::Charge.create(
+      # name:        "babu",
       source:      params[:stripeToken],
       amount:      cart_total, # in cents
       description: "Jungle Order",
-      currency:    'cad'
+      # billing_address: 'abohar road ganganagar',
+      currency:    'inr'
     )
   end
 
